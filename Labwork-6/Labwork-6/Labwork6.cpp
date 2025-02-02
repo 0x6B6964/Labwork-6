@@ -339,7 +339,7 @@ int* Labwork6::Task3(int* array, int length, int K) {
     int* result = new int[resultArrayLength];
 
     for (int i = 0; i < resultArrayLength; i++)
-        result[i] = array[i * K + 1];
+        result[i] = array[(i + 1) * K - 1];
 
     return result;
 }
@@ -497,14 +497,14 @@ int* Labwork6::Task5(int* array, int length, int& outK) {
     outK = 0;
     
     for (int i = 1; i < length; i++) {
-        if (array[i] > array[i-1])
+        if (array[i] > array[i - 1])
             outK++;
     }
 
     int* result = new int[outK];
     int resultCounter = 0;
 
-    for (int i = 1; i < length; i++) {
+    for (int i = length - 1; i >= 1; i--) {
         if (array[i] > array[i - 1])
             result[resultCounter++] = i + 1;
     }

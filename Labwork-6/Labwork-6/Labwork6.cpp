@@ -409,18 +409,18 @@ int Labwork6::Task4CleanMemory(int* array)
     return NO_EXCEPTION;
 }
 
-bool Labwork6::Task4(int* array, int length) {
+double Labwork6::Task4(int* array, int length) {
     if (length < 2)
-        return false;
+        return 0;
 
-    double ratio = array[1] / array[0];
+    double ratio = array[1] / (double) array[0];
     
     for (int i = 2; i < length; i++) {
-        if (abs(array[i] / array[i - 1] - ratio) > EPSILON)
-            return false;
+        if (abs(array[i] / (double) array[i - 1] - ratio) > EPSILON)
+            return 0;
     }
 
-    return true;
+    return ratio;
 }
 
 

@@ -53,7 +53,7 @@ private:
 	static int Task4Parse(bool result);
 	static int Task4CleanMemory(int* array);
 public:
-	static bool Task4(int* array, int length);
+	static double Task4(int* array, int length);
 
 private:
 	static int Task5main();

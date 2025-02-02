@@ -174,8 +174,6 @@ int Labwork6::Task2main()
 
     Task2InputHandling(array, length);
 
-    ArrayUtil::ConsoleLog<int>(array, length);
-
     int K;
     int* resultArray = Task2(array, length, K);
 
